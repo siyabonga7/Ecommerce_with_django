@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{product.name}}</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+ 
+</head>
+<body>
+ 
+ 
+    <ul>
+            {% for product in name product %}
+         <li>
+            <h2>{{product.name}}</h2>
+            <P> {{ product.desrciption}}</p>
+            <p> prices: kshs.{{product.price}}</p>
+            <img src="{{products.image.url}}" alt="{{product.name}}">
+            <p> available: {{product.available|"yes,no"}}</p>>
+
+        </li>
+    {% endfor %}
+    </ul>
+    <a href ="{% url 'product_list'%}" class"back-link">back to product list</a>
+</body>
+</html>
